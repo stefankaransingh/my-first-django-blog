@@ -1,17 +1,33 @@
 <html>
     <head>
         <title>Django blog</title>
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+
     </head>
     <body>
         <div>
             <h1><a href="">Django Blog</a></h1>
             {%for post in posts%}
-            <div>
-              <p>published: {{post.published_date}}</p>
-              <h1><a href="">{{post.title}}</a></h1>
-              <p>{{post.text|linebreaksbr}}</p>
+            <div class="row">
+            <div class="col s12 m6">
+              <div class="card blue-grey darken-1">
+                <div class="card-content white-text">
+                  <p>published: {{post.published_date}}</p>
+                  <span class="card-title">{{post.title}}</span>
+                  <p>{{post.text|linebreaksbr}}</p>
+                </div>
+                <div class="card-action">
+                  <a href="#">This is a link</a>
+                  <a href="#">This is a link</a>
+                </div>
+              </div>
             </div>
-            {%endfor%}
+          </div>
+          {%endfor%}
         </div>
     </body>
 </html>
