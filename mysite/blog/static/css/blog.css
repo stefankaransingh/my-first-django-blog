@@ -1,8 +1,36 @@
+
+.page-header{
+   background-color: #28b5f4;
+   margin-top: 0;
+   padding: 20px 20px 20px 40px;
+}
+
+.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
+    color: #ffffff;
+    font-size: 36pt;
+    text-decoration: none;
+}
+
+.posts{
+  padding-top:50px;
+  padding-bottom: 50px;
+  padding-left:15px;
+  padding-right: 15px;
+}
+
+
 .section-title{
   text-align: center;
+  font-family: 'Robot Mono',monospace;
 }
+
 .card{
   text-align: left;
   margin-left: 10%;
   margin-right: 10%;
+  font-family: 'Robot Mono',monospace;
+}
+
+.card .card-content{
+  background: #28b5f4;
 }
