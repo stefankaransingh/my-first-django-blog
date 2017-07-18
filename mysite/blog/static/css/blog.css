@@ -44,3 +44,14 @@ a.title-link{
 a.title-link:hover {
     color: #039be5 !important;
 }
+
+
+.form-container{
+  padding: 25px;
+}
+
+
+footer.page-footer {
+  padding-top: 20px;
+  background-color: #28b5f4 !important;
+}
