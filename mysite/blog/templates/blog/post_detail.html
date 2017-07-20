@@ -4,20 +4,27 @@
     <div class="post">
       <div class="card darken-1">
         <div class="card-content white-text">
+        {% if user.is_authenticated %}
+        <a href="{% url 'post_edit' pk=post.pk %}" class="btn-floating btn-large yellow">
+           <i class="large material-icons">mode_edit</i>
+        </a>
+        <a href="{% url 'post_remove' pk=post.pk%}" class="btn-floating btn-large red">
+           <i class="large material-icons">delete</i>
+        </a>
+
+        {% endif %}
+        <h1>{{ post.title }}</h1>
+        <p>{{ post.text|linebreaksbr }}</p>
+
+        <div class="post_footer">
         {% if post.published_date %}
             <div class="date">
                 {{ post.published_date }}
             </div>
+        {% else %}
+            <a class="waves-effect waves-light btn" href="{% url 'post_publish' pk=post.pk %}"> Publish </a>
         {% endif %}
-        <br/>
-        {% if user.is_authenticated %}
-        <a href="{% url 'post_edit' pk=post.pk %}" class="btn-floating btn-large red">
-           <i class="large material-icons">mode_edit</i>
-        </a>
-        
-        {% endif %}
-        <h1>{{ post.title }}</h1>
-        <p>{{ post.text|linebreaksbr }}</p>
+      </div>
     </div>
   </div>
 </div>

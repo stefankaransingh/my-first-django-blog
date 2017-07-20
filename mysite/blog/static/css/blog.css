@@ -50,8 +50,12 @@ a.title-link:hover {
   padding: 25px;
 }
 
+.post_footer {
+    padding-top: 30px;
+}
 
 footer.page-footer {
-  padding-top: 20px;
+  margin-top: 50px;
+  padding-top: 20px !important;
   background-color: #28b5f4 !important;
 }

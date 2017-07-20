@@ -1,0 +1,20 @@
+{%extends 'blog/base.html'%}
+            {% block content%}
+            <div class="posts">
+              {%for post in posts%}
+              <div class="row">
+              <div class="col s12 ">
+                <div class="card darken-1">
+                  <div class="card-content white-text">
+                    <span class="card-title"><a class="title-link"href="{% url 'post_detail' pk=post.pk %}">{{post.title}}</a></span>
+                    <p>{{post.text|truncatechars:200}}</p>
+                  </div>
+                  <div class="card-action">
+                    <p>created: {{post.created_date|date:'d-m-y'}}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {%endfor%}
+          </div>
+          {% endblock %}
